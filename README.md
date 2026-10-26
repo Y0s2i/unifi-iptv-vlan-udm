@@ -28,7 +28,7 @@ curl -fsL "[https://raw.githubusercontent.com/unifi-utilities/unifios-utilities/
 Aby uniknąć błędu E212: Can't open file for writing, najpierw utwórz wymagany katalog, a następnie stwórz plik za pomocą wbudowanego edytora vi.
 ```bash
 mkdir -p /data/on_boot.d
-vi /data/on_boot.d/10-iptv-vlan.sh
+vi /data/on_boot.d/438-iptv-vlan.sh
 ```
 
 Gdy otworzy się edytor:
@@ -49,13 +49,13 @@ Wpisz :wq i wciśnij Enter, aby zapisać plik i zamknąć edytor.
 ## Krok 4: Nadanie uprawnień i sprawdzenie
 Nadaj skryptowi prawa do uruchamiania:
 ```bash
-chmod +x /data/on_boot.d/10-iptv-vlan.sh
+chmod +x /data/on_boot.d/438-iptv-vlan.sh
 ```
 
 Możesz zweryfikować poprawne zapisanie i uprawnienia poleceniami:
 ```bash
-cat /data/on_boot.d/10-iptv-vlan.sh
-ls -l /data/on_boot.d/10-iptv-vlan.sh
+cat /data/on_boot.d/438-iptv-vlan.sh
+ls -l /data/on_boot.d/438-iptv-vlan.sh
 ```
 
 (W wyniku ls -l powinieneś zobaczyć flagę -rwxr-xr-x, co oznacza gotowość do uruchomienia).
@@ -63,7 +63,7 @@ ls -l /data/on_boot.d/10-iptv-vlan.sh
 ## Krok 5: Ręczne wywołanie skryptu (bez restartowania routera)
 Aby telewizja ruszyła od razu w bieżącej sesji, wpisz:
 ```bash
-sh /data/on_boot.d/10-iptv-vlan.sh
+sh /data/on_boot.d/438-iptv-vlan.sh
 ```
 
 Sprawdzenie, czy wirtualny mostek połączył interfejsy:
