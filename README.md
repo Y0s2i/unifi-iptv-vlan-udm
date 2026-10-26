@@ -1,12 +1,10 @@
-# UniFi UDM Pro / Max - Sprzętowy mostek IPTV (L2 Bridge) dla wkładek GPON (np. Leox)
+# UniFi UDM Pro / Max - Konfiguracja IPTV (Multicast, VLAN 438) z wkładki GPON lub zewnętrznego terminala ONT (np. ZTE 601) na WAN
 
-Ten poradnik pokazuje, jak poprawnie skonfigurować telewizję od dostawcy ISP (np. na VLAN 438), gdy wkładka GPON jest wpięta bezpośrednio w port WAN routera z serii UniFi Dream Machine. 
-
-Domyślnie system UniFi OS nie pozwala na zmostkowanie (L2) portu WAN z siecią LAN, co blokuje pakiety dekodera. Ten skrypt automatyzuje tworzenie mostka przy każdym restarcie urządzenia.
+Poradnik jak przepuścić oparty na multicastach ruch telewizyjny (VLAN 438) z wkładki GPON (np. Leox) lub zewnętrznego terminala ONT (np. ZTE 601) działającego w trybie bridge. Rozwiązanie sprawdza się w scenariuszu, gdzie sprzęt operatora jest wpięty prosto w port WAN routera UDM Pro / Max, a sesja PPPoE zestawiana jest bezpośrednio na urządzeniu UniFi. System UniFi domyślnie blokuje zmostkowanie L2 portu WAN z siecią LAN, co rozwiązujemy poniższym skryptem startowym.
 
 ## Wymagania
 * Router: UDM Pro, UDM SE lub UDM Pro Max (skrypt operuje na interfejsie WAN).
-* Urządzenie dostępowe GPON (np. wkładka Leox LXT-010H-D) pracujące w trybie bridge.
+* Urządzenie dostępowe GPON lub ONT (np. wkładka Leox LXT-010H-D lub ZTE 610) pracujące w trybie bridge.
 * Włączony dostęp SSH w konsoli UniFi OS (OS Settings -> Console Settings -> SSH).
 
 ## Krok 1: Przygotowanie sieci w panelu UniFi
