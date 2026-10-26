@@ -4,7 +4,7 @@ Poradnik jak przepuścić oparty na multicastach ruch telewizyjny (VLAN 438) z w
 
 ## Wymagania
 * Router: UDM Pro, UDM SE lub UDM Pro Max (skrypt operuje na interfejsie WAN).
-* Urządzenie dostępowe GPON lub ONT (np. wkładka Leox LXT-010H-D lub ZTE 610) pracujące w trybie bridge.
+* Urządzenie dostępowe GPON lub ONT (np. wkładka Leox LXT-010H-D lub ZTE 601) pracujące w trybie bridge.
 * Włączony dostęp SSH w konsoli UniFi OS (OS Settings -> Console Settings -> SSH).
 
 ## Krok 1: Przygotowanie sieci w panelu UniFi
